@@ -1,0 +1,3 @@
+server string hudwad;
+server string hudauthor;
+server bool hudmap;

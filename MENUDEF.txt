@@ -1,0 +1,20 @@
+AddOptionMenu "OptionsMenu"
+{
+	SubMenu "Eternal Hud Options", "EternalHudOptions"
+}
+
+OptionMenu "EternalHudOptions"
+{
+    Title "Eternal Hud Options"
+	StaticText "Set map values"
+	StaticText " "
+	TextField "Wad name", "hudwad"
+	TextField "Author (you can use \"MAPINFO\")", "hudauthor"
+	Option "Show map name", "hudmap", "showhudmap"
+}
+
+OptionValue "showhudmap"
+{
+	0, "No"
+	1, "Yes"
+}

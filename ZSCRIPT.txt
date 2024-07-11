@@ -1,0 +1,40 @@
+version "4.0"
+
+Class HudEventHandler : EventHandler
+{
+	override void RenderOverlay(RenderEvent e)
+	{
+		if (level.MapName == "TITLEMAP") {
+            return;
+        }
+		
+		let wadcvar = CVar.FindCVar("hudwad");
+        let authorcvar = CVar.FindCVar("hudauthor");
+        let mapcvar = CVar.FindCVar("hudmap");
+        
+        String hudwad = wadcvar ? wadcvar.GetString() : "";
+        String hudauthor = authorcvar ? authorcvar.GetString() : "";
+        bool displaymapname = mapcvar ? mapcvar.GetBool() : false;
+        
+        if (hudauthor == "MAPINFO") {
+            hudauthor = level.AuthorName;
+        }
+        
+        int mapStringsY = 5;
+        RenderMapString(Font.CR_GRAY, mapStringsY, hudwad);
+        RenderMapString(Font.CR_LIGHTBLUE, mapStringsY+9, hudauthor);
+        if (displaymapname) {
+            RenderMapString(Font.CR_RED, mapStringsY+18, level.LevelName);
+        }
+	}
+	
+	ui void RenderMapString(Color c, int y, String txt)
+    {
+        int x = -100;
+        Screen.DrawText(Font.GetFont("SMALLFONT"), c, x, y, txt,
+                            DTA_VirtualWidth, 640,
+                            DTA_VirtualHeight, 400,
+                            DTA_Alpha, 1.0
+                        );
+    }
+}

@@ -1,0 +1,50 @@
+Height 0;
+
+statusbar normal, forcescaled
+
+{
+	//Main hud
+	DrawBar "HEALTHFU", "HEALTHEM", Health, horizontal, -5, 175;
+	DrawBar "ARMORFUL", "ARMOREM", Armor, horizontal, -5, 164;
+	DrawKeybar 3, horizontal, 24, 133, 14, 0;
+	DrawKeybar 3, horizontal, 24, 133, 4, 3;
+	DrawImage "EHUDPNL", -38, 160;
+	DrawImage "AMMOICO", 310, 172;
+	DrawImage "EKEYPNL", 115, 0;
+	DrawNumber 3, INDEXFONT, red, Ammo1, 326, 175;
+	DrawNumber 3, INDEXFONT, white, Ammo1, whennotzero, 326, 175;
+	DrawNumber 3, INDEXFONT, red, Ammo2, 311, 175;
+	DrawNumber 3, INDEXFONT, yellow, Ammo2, whennotzero, 311, 175;
+	DrawNumber 3, INDEXFONT, cyan, Health, -6, 175;
+	DrawNumber 3, INDEXFONT, green, Armor, -6, 165;
+
+	//Level stats
+	DrawBar "STKILLS1", "STKILLS0", Kills, horizontal, 285, 3;
+	DrawNumber 4, INDEXFONT, orange, Kills, 275, 3;
+	DrawNumber 4, INDEXFONT, orange, Monsters, 365, 3;
+	DrawBar "STITEMS1", "STITEMS0", Items, horizontal, 285, 13;
+	DrawNumber 4, INDEXFONT, green, Items, 275, 13;
+	DrawNumber 4, INDEXFONT, green, TotalItems, 365, 13;
+	DrawBar "STSCRTS1", "STSCRTS0", Secrets, horizontal, 285, 23;
+	DrawNumber 4, INDEXFONT, purple, Secrets, 275, 23;
+	DrawNumber 4, INDEXFONT, purple, TotalSecrets, 365, 23;
+}
+
+statusbar fullscreen, forcescaled
+
+{
+	//Main hud
+	DrawBar "HEALTHFU", "HEALTHEM", Health, horizontal, -5, 175;
+	DrawBar "ARMORFUL", "ARMOREM", Armor, horizontal, -5, 164;
+	DrawKeybar 3, horizontal, 24, 133, 14, 0;
+	DrawKeybar 3, horizontal, 24, 133, 4, 3;
+	DrawImage "EHUDPNL", -38, 160;
+	DrawImage "AMMOICO", 310, 172;
+	DrawImage "EKEYPNL", 115, 0;
+	DrawNumber 3, INDEXFONT, red, Ammo1, 326, 175;
+	DrawNumber 3, INDEXFONT, white, Ammo1, whennotzero, 326, 175;
+	DrawNumber 3, INDEXFONT, red, Ammo2, 311, 175;
+	DrawNumber 3, INDEXFONT, yellow, Ammo2, whennotzero, 311, 175;
+	DrawNumber 3, INDEXFONT, cyan, Health, -6, 175;
+	DrawNumber 3, INDEXFONT, green, Armor, -6, 165;
+}
